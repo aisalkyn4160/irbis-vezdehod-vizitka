@@ -1,0 +1,237 @@
+@import url(./header-style.css);
+@import url(./promo-style.css);
+@import url(./about-style.css);
+@import url(./application-style.css);
+@import url(./footer-style.css);
+@import url(./models-style.css);
+@import url(./gallery-style.css);
+@import url(./model-style.css);
+/* -------------------------------------------reset-styles------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+
+h1,h2, h3, h4, h5, h6{font-style: inherit;}
+
+/* -------------------------------------------main-styles------------------------------------------- */
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Manrope', sans-serif;
+	background-color: #F8F8F8;
+	color: #373737;
+	font-size: 16px;
+	line-height: 1.4;
+}
+body.no-scroll{
+	overflow: hidden;
+}
+.layout{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+}
+
+header{
+	flex-shrink: 0;
+}
+
+main{
+	flex-grow: 1;
+}
+h2{
+	font-family: 'Unbounded';
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 60px;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	margin-bottom: 50px;
+}
+h3{
+	font-family: 'Unbounded';
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 48px;
+	letter-spacing: -0.02em;
+	text-align: left;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+h4{
+	font-family: 'Manrope';
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+	padding-bottom: 7px;
+    border-bottom: 2px solid rgba(4, 160, 173, 1);
+    margin-bottom: 10px;
+	width: fit-content;
+}
+p{
+	opacity: 0.7;
+}
+button{
+	background: rgba(4, 160, 173, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 20px;
+	color: rgba(247, 247, 247, 1);
+	padding: 20px 30px;
+	white-space: nowrap;
+
+}
+button:hover{
+	background: rgba(4, 160, 173, 0.8);
+	transition: all 0.5s ease;
+}
+footer{
+	flex-shrink: 0;
+}
+
+.container{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.popup{
+	max-width: 760px;
+	min-width: 290px;
+	margin: 0 auto;
+	padding: 50px 80px;
+	background: rgba(247, 247, 247, 1);
+	position: fixed;
+	top: -1000%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	transition: top 0.5s ease;
+}
+.popup .application-form{
+	max-width: 100%;
+	flex-direction: column;
+}
+.popup .application-form input, 
+.popup .application-form textarea{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.popup .application-btn{
+	flex-direction: column;
+}
+.popup .application-btn button{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.popup .application-form input, 
+.popup .application-form textarea{
+    border-bottom: 1px solid rgba(37, 37, 37, 0.5);
+	margin-bottom: 0;
+}
+
+.popup-close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	transform: rotate(45deg);
+	font-size: 30px;
+	opacity: 0.5;
+}
+.popup h3{
+	margin-top: 20px;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.popup .application-btn span{
+	max-width: 100%;
+}
+
+@media (max-width: 800px) {
+	h2{
+		font-size: 22px;
+		line-height: 29px;
+        margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 670px) {
+	body{
+		font-size: 12px;
+	}
+	button{
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+	button img{
+		width: 20px;
+	}
+	h3{
+		font-size: 22px;
+		line-height: 28.6px;
+		margin-bottom: 10px;
+	}
+	h4{
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.call-btn{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 460px) {
+	.popup{
+		padding: 40px 20px 30px;
+	}
+
+	.popup-close{
+		top: 10px;
+		right: 20px;
+	}
+	.popup h3{
+		white-space: normal;
+	}
+}
