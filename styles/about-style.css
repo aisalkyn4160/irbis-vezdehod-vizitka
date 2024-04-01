@@ -2,8 +2,9 @@
     padding: 80px 0;
 }
 
-.about h2 span{
+.about span{
     display: block;
+    color: rgba(113, 114, 113, 1);
 }
 
 .about-content{
@@ -47,6 +48,7 @@
 .about-imgs ul li{
     display: flex;
     align-items: center;
+    color: rgba(37, 37, 37, 1);
 }
 .about-imgs ul li svg{
     margin-right: 10px;

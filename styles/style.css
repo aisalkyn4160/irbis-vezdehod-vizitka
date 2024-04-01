@@ -52,7 +52,7 @@ html{
 body{
 	font-family: 'Manrope', sans-serif;
 	background-color: #F8F8F8;
-	color: #373737;
+	color: rgba(37, 37, 37, 1);
 	font-size: 16px;
 	line-height: 1.4;
 }
@@ -103,7 +103,7 @@ h4{
 	width: fit-content;
 }
 p{
-	opacity: 0.7;
+	color: rgba(37, 37, 37, 0.7);
 }
 button{
 	background: rgba(4, 160, 173, 1);
@@ -168,6 +168,7 @@ footer{
 .popup .application-form textarea{
     border-bottom: 1px solid rgba(37, 37, 37, 0.5);
 	margin-bottom: 0;
+	color: rgba(37, 37, 37, 1);
 }
 
 .popup-close{
@@ -197,7 +198,7 @@ footer{
 	}
 }
 
-@media (max-width: 670px) {
+@media (max-width: 700px) {
 	body{
 		font-size: 12px;
 	}

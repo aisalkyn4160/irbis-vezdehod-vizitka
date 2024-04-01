@@ -71,6 +71,7 @@
 }
 .model-info .model-price{
     margin-left: 0;
+    font-family: 'Unbounded';
 }
 .model-info h4{
     border: none;
@@ -145,6 +146,9 @@
   .add-characteristic-list input[type="checkbox"]:checked+label::before {
     background-image: url('../assets/icons/checkbox\ line.svg');
   }
+  .add-characteristic-price{
+    font-family: 'Unbounded';
+  }
   .models .application-form input, 
   .models .application-form textarea{
     border-bottom: 1px solid rgba(37, 37, 37, 0.5);
@@ -180,7 +184,11 @@
  
   .accordion-content.active{
     display: block;
+  }
 
+  .models .application-form input, 
+  .models .application-form textarea{
+    color:rgba(37, 37, 37, 1);
   }
 
   @media (max-width: 930px) {

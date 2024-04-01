@@ -50,7 +50,7 @@ const modelSwiper2 = new Swiper(".modelSwiper2", {
 const popup = document.querySelector('.popup');
 const callBtn = document.querySelectorAll('.call-btn');
 const popupClose = document.querySelector('.popup-close');
-const footerBtn = document.querySelector('.footer button');
+const footerBtn = document.querySelector('.footer-top button');
 console.log(footerBtn);
 
 callBtn.forEach((item) => {
@@ -87,7 +87,7 @@ const checkboxes = document.querySelectorAll('.add-characteristic-list input[typ
 const modelPrice = document.querySelector('.add-characteristic-price.model-price');
 
 function calcPrice() {
-  let total = 0;
+  let total = 1159000;
   checkboxes.forEach((it) => {
     if(it.checked) {
      let label = it.nextElementSibling;

@@ -24,11 +24,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-    font-weight: 500;
     white-space: nowrap;
 }
-.nav-menu li:hover{
-    color: #717271;
+.nav-menu li a{
+    color: rgba(37, 37, 37, 1);
+    font-weight: 500;
+
+}
+.nav-menu li a:hover{
+    color: rgba(113, 114, 113, 1);
     transition: all 0.5s ease;
 }
 .nav-menu li a.selected{
@@ -40,8 +44,11 @@
     gap: 30px;
     white-space: nowrap;
 }
+.contacts a{
+    color: rgba(37, 37, 37, 1);
+}
 .contacts a:hover{
-    color: #717271;
+    color: rgba(113, 114, 113, 1);
     transition: all 0.5s ease;
 }
 .socials{
@@ -54,7 +61,7 @@
 }
 
 .socials a:hover>svg path{
-    fill: #717271;
+    fill: rgba(113, 114, 113, 1);
     transition: all 0.5s ease;
 }
 
