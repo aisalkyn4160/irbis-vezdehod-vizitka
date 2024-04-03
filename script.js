@@ -24,26 +24,6 @@ const swiper = new Swiper('.promoSwiper', {
 
 
 
-const modelSwiper = new Swiper(".modelSwiper", {
-  navigation: {
-    nextEl: ".modelSwiper .swiper-button-next",
-    prevEl: ".modelSwiper .swiper-button-prev",
-  },
-  direction: 'vertical',
-  slidesPerView: 3,
-  freeMode: true,
-  watchSlidesProgress: true,
-})
-
-const modelSwiper2 = new Swiper(".modelSwiper2", {
-  direction: 'vertical',
-  loop: true,
-  spaceBetween: 20,
-  thumbs: {
-      swiper: modelSwiper
-  },
-
-})
 
 
 // ------------------------------popup----------------------
@@ -84,7 +64,7 @@ modelInfoListSpan.forEach((item) => {
 // -----------------------------------price---------------------
 const checkboxes = document.querySelectorAll('.add-characteristic-list input[type="checkbox"]');
 
-const modelPrice = document.querySelector('.add-characteristic-price.model-price');
+const modelPrice = document.querySelector('.add-characteristic .characteristic-price');
 
 function calcPrice() {
   let total = 1159000;
@@ -114,38 +94,77 @@ const accordionContent = document.querySelectorAll('.accordion-content');
 
 accordionHeaders.forEach((header) => {
   header.addEventListener('click', () => {
-    accordionHeaders.forEach((otherHeader) => {
-      if (otherHeader !== header) {
-        otherHeader.classList.remove('active');
-        otherHeader.nextElementSibling.classList.remove('active');
-      }
-    });
+    if(window.innerWidth > 450) {
+      accordionHeaders.forEach((otherHeader) => {
+        if (otherHeader !== header) {
+          otherHeader.classList.remove('active');
+          otherHeader.nextElementSibling.classList.remove('active');
+        }
+      });
+    }
     
     const content = header.nextElementSibling;
     content.classList.toggle('active');
     header.classList.toggle('active');
+
+    if(window.innerWidth < 450) {
+      const mobileContent = document.querySelectorAll('.mobile-accordion-content');
+
+      mobileContent.forEach((item) => {
+        if(item.classList.contains('active')) {
+          item.style.maxHeight = item.scrollHeight + 'px';
+        }else {
+          item.style.maxHeight = 0;
+        }
+      })
+    }
+
+
     if(window.innerWidth > 400) {
       nextBlock.style.marginTop = content.offsetHeight + 50 +'px';
     }
+
   });
 });
 
 if(window.innerWidth > 400) {
   accordionContent.forEach((item) => {
     if(item.classList.contains('active')) {
+      console.log(item.offsetHeight);
       nextBlock.style.marginTop = item.offsetHeight + 50 +'px';
     }
   })
 }
 
 // --------------------------------swiper-----------------------
+swiper.on('slideChange', () => {
+  swiperPagCur.innerText = 0 + swiperPagCur.innerText; 
+  swiperPagTotal.innerText = 0 + swiperPagTotal.innerText;
+})
+const modelSwiper = new Swiper(".modelSwiper", {
+  navigation: {
+    nextEl: ".model-slider .swiper-button-next",
+    prevEl: ".model-slider .swiper-button-prev",
+  },
+  direction: 'vertical',
+  slidesPerView: 3,
+  spaceBetween: 10,
+  freeMode: true,
+  watchSlidesProgress: true,
+})
+
+const modelSwiper2 = new Swiper(".modelSwiper2", {
+  direction: 'vertical',
+  loop: true,
+  thumbs: {
+      swiper: modelSwiper
+  },
+
+})
+
+
 const swiperPagCur = document.querySelector('.swiper-pagination-current');
 const swiperPagTotal = document.querySelector('.swiper-pagination-total');
 
 swiperPagCur.innerText = 0 + swiperPagCur.innerText;
 swiperPagTotal.innerText = 0 + swiperPagTotal.innerText;
-
-swiper.on('slideChange', () => {
-  swiperPagCur.innerText = 0 + swiperPagCur.innerText; 
-  swiperPagTotal.innerText = 0 + swiperPagTotal.innerText;
-})
