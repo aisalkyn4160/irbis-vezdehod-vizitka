@@ -253,8 +253,7 @@
     
   }
 
-  @media (max-width: 450px) {
-    
+  @media (max-width: 450px) {   
     .modelSwiper2{
         aspect-ratio: 1/1;
         height: auto;
@@ -306,10 +305,13 @@
   }
 
   @media (max-width: 400px) {
+    .modelSwiper2{
+        height: 223px;
+    }
     .swiper.modelSwiper{
         width: 58px;
     }
     .model-swiper-wrapper{
-        height: 208px;
+        height: 223px;
     }
   }
