@@ -4,8 +4,8 @@
 @import url(application-style.css);
 @import url(footer-style.css);
 @import url(models-style.css);
-@import url(gallery-style.css);
 @import url(model-style.css);
+@import url(gallery-style.css);
 /* -------------------------------------------reset-styles------------------------------------------- */
 *{
     margin: 0;
