@@ -1,11 +1,11 @@
-@import url(./header-style.css);
-@import url(./promo-style.css);
-@import url(./about-style.css);
-@import url(./application-style.css);
-@import url(./footer-style.css);
-@import url(./models-style.css);
-@import url(./gallery-style.css);
-@import url(./model-style.css);
+@import url(header-style.css);
+@import url(promo-style.css);
+@import url(about-style.css);
+@import url(application-style.css);
+@import url(footer-style.css);
+@import url(models-style.css);
+@import url(gallery-style.css);
+@import url(model-style.css);
 /* -------------------------------------------reset-styles------------------------------------------- */
 *{
     margin: 0;
