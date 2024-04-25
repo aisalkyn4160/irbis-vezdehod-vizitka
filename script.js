@@ -11,6 +11,7 @@ burger.addEventListener('click', () => {
 
 // -----------------------swiper-----------------------
 const swiper = new Swiper('.promoSwiper', {
+    loop: true,
     pagination: {
       el: ".promoSwiper .swiper-pagination",
       type: "fraction", 
